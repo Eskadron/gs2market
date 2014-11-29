@@ -82,7 +82,6 @@ public class ListingUpdater {
 							
 							if(newQuantity == null){
 								publishSellEvent(itemId, previousQuantity, price, updateTimestamp, ac.getSession());
-								break;
 							} else if(newQuantity < previousQuantity){
 								publishSellEvent(itemId, previousQuantity - newQuantity, price, updateTimestamp, ac.getSession());
 								if(newQuantity > 0){
